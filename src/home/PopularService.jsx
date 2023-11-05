@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const PopularService = () => {
     const [services,setServices] = useState([])
@@ -15,9 +16,9 @@ const PopularService = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 lg:ml-20 gap-5">
                 {
                     services.map(service => (
-                        <div key={service._id}>
+                        <div key={service._id} >
                          <div className="card w-[600px] bg-base-100 shadow-xl">
-                         <figure><img src={service.ServiceImage} alt="Shoes" /></figure>
+                         <figure><img className="h-[400px]" src={service.ServiceImage} alt="Shoes" /></figure>
                          <div className="card-body">
                          <h2 className="card-title">{service.ServiceName}</h2>
                          <p>{service.ServiceDescription}</p>
@@ -26,7 +27,7 @@ const PopularService = () => {
                          <button className="btn "> See details</button>
                          </div>
                          <div>
-                            <h1>About service provider</h1>
+                            <h1 className="font-bold py-3">About service provider</h1>
                             <div className="flex items-center justify-between">
                                 <div >
                                 <div className="avatar">
@@ -47,7 +48,7 @@ const PopularService = () => {
                     ))
                 }
             </div>
-            
+            <Link className="flex justify-center"><button className="btn my-5 ">see all service</button></Link>
         </div>
     );
 };

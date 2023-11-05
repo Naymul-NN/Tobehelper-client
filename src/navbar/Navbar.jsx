@@ -4,15 +4,15 @@ const Navbar = () => {
     const link = <>
     
                  
-                    <li><Link>Home</Link></li>
-                    <li><Link>Services </Link></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to ="/allservices">Services </Link></li>
                     
 
           </>         
 
     return (
         <div className="py-10 px-10">
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 fixed z-50 top-0">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -50,7 +50,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end flex lg:flex-row flex-col ">
-  <a className="btn">Button</a>
+  <a className="btn mr-24">Button</a>
   </div>
 </div>
         </div>
