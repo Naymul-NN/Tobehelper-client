@@ -8,6 +8,7 @@ import SeeDetails from "../singleService/SeeDetails";
 import SeeAllDetails from "../seeallDetails/SeeAllDetails";
 import AddService from "../addservice/AddService";
 import MyService from "../myservice/MyService";
+import Update from "../update/Update";
 const router = createBrowserRouter([
     {
       path: "/",
@@ -46,6 +47,11 @@ const router = createBrowserRouter([
         {
           path:'/myservice',
           element:<MyService></MyService>
+        },
+        {
+          path:'/update/:id',
+          element:<Update></Update>,
+          loader:({params}) => fetch(`http://localhost:5000/providerServiceOne/${params.id}`)
         }
       ]
     },

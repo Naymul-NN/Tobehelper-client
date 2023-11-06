@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../auth/AuthProvider";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 const MyService = () => {
     const {user}= useContext(AuthContext);
@@ -18,21 +19,18 @@ const MyService = () => {
 
        //delete option
        const handledeleteCart = (id) => {
-        // Display a toast for confirmation
         const confirmToast = toast.custom(() => (
           <div className="bg-zinc-200 p-10 mt-40">
             <h1>Are you sure to delete it?</h1>
             <button
-              onClick={() => {
-                //  t.dismiss();
+              onClick={() => {               
                 proceedWithDeletion();
               }}
             >
               Yes
             </button>
             <button className="ml-4"
-              onClick={() => {
-                // t.dismiss();
+              onClick={() => {            
                 cancelDeletion();
               }}
             >
@@ -40,7 +38,6 @@ const MyService = () => {
             </button>
           </div>
         ));
-      
         const proceedWithDeletion = () => {
           // Delete the item and update the state
           fetch(`http://localhost:5000/providerservice/${id}`, {
@@ -51,21 +48,20 @@ const MyService = () => {
             console.log(data);
               const dataRemain = myservice.filter((data) => data._id !== id);
               setMyservice(dataRemain);
-              // Show a success toast after successful deletion
+             
               toast.success('Item deleted successfully', {
-                duration: 3000, // Duration in milliseconds
+                duration: 2000, // Duration in milliseconds
               });
             });
         };
       
         const cancelDeletion = () => {
-          // Show a warning toast for cancellation
+        
           toast.error('Deletion canceled', {
-            duration: 3000, // Duration in milliseconds
+            duration: 2000, // Duration in milliseconds
           });
         };
       
-        // Show the custom confirmation toast
         confirmToast();
       };
       
@@ -82,7 +78,7 @@ const MyService = () => {
                         <h2 className="card-title">serviceName:{item?.serviceName}</h2>
                         <p>price :$ {item?.price} 1/h</p>
                         <div className="card-actions ">
-                        <button className="btn btn-primary">Edit</button>
+                      <Link to={`/update/${item?._id}`}>  <button className="btn btn-primary">Edit</button></Link>
                         <button onClick={()=>handledeleteCart(item?._id)} className="btn btn-primary">Delete</button>
                         </div>
                          </div>
