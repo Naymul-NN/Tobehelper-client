@@ -25,7 +25,7 @@ const Allservices = () => {
   );
   const visibleData = showAll ? filteredData : filteredData.slice(0, 3);
 
-    // console.log(data,isFetching)
+     console.log(data)
     return (
         <div>
             <h1 className="pt-10 text-center">here you can see: {filteredData?.length } data</h1>
