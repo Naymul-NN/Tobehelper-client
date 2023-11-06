@@ -48,7 +48,7 @@ const PopularService = () => {
                     ))
                 }
             </div>
-            <Link className="flex justify-center"><button className="btn my-5 ">see all service</button></Link>
+            <Link to="/allservices" className="flex justify-center"><button className="btn my-5 ">see all service</button></Link>
         </div>
     );
 };

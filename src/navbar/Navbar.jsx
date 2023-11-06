@@ -1,18 +1,28 @@
-import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../auth/AuthProvider";
+import toast from "react-hot-toast";
 const Navbar = () => {
+  const {user, logOut} = useContext(AuthContext)
 
-    const link = <>
-    
-                 
+  const handleLogout = () => {
+    logOut()
+   .then(() => {
+     toast.success('sign out successful');
+    })
+   .catch((error) => {
+     console.error(error);
+   });
+   };
+
+    const link = <>          
                     <li><Link to="/">Home</Link></li>
                     <li><Link to ="/allservices">Services </Link></li>
-                    
-
           </>         
 
     return (
-        <div className="py-10 px-10">
-        <div className="navbar bg-base-100 fixed z-50 top-0">
+        <div className="py-10 relative ml-16">
+        <div className="navbar  bg-base-100 fixed z-50 top-0 w-[90%] mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -47,12 +57,25 @@ const Navbar = () => {
         </details>
       </li>
 
-    </ul>
+     </ul>
+     </div>
+   <div className="navbar-end flex lg:flex-row flex-col gap-24">
+  {
+    user &&    <div className="w-14  rounded-full">
+                <h1 className="pr-2"><span className="font-bold">user:</span>{user.email}</h1>
+                <img src={user.photoURL} />
+      </div>
+  }
+   {
+      user ?
+      <button onClick={handleLogout} className="btn btn-sm btn-primary">log out</button>
+      :
+      
+      <Link to ="/login"><button className="btn  btn-sm btn-primary">log in</button></Link>
+    
+   }  
   </div>
-  <div className="navbar-end flex lg:flex-row flex-col ">
-  <a className="btn mr-24">Button</a>
   </div>
-</div>
         </div>
     );
 };
