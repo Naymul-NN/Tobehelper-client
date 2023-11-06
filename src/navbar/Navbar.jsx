@@ -50,8 +50,8 @@ const Navbar = () => {
         <details>
           <summary>Dashbord</summary>
           <ul className="p-2 w-44">
-          <li><Link>My-services</Link></li>
-          <li><Link>Add-services </Link></li>
+          <li><Link to="/myservice">My-services</Link></li>
+          <li><Link to="/addservice">Add-services </Link></li>
           <li><Link> My-schedules</Link></li>
           </ul>
         </details>
