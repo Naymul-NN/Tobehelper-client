@@ -4,6 +4,8 @@ import Home from "../home/Home";
 import Allservices from "../allService/Allservices";
 import Register from "../register/Register";
 import Login from "../login/Login";
+import SeeDetails from "../singleService/SeeDetails";
+import SeeAllDetails from "../seeallDetails/SeeAllDetails";
 const router = createBrowserRouter([
     {
       path: "/",
@@ -24,6 +26,16 @@ const router = createBrowserRouter([
         {
           path:'/login',
           element:<Login></Login>
+        },
+        {
+          path:'/seeDetails/:id',
+          element:<SeeDetails></SeeDetails>,
+          loader:({params}) => fetch(`http://localhost:5000/service/${params.id}`)
+        },
+        {
+          path:'/seeAllDetails/:id',
+          element:<SeeAllDetails></SeeAllDetails>,
+          loader:({params})=> fetch(`http://localhost:5000/allservice/${params.id}`)
         }
       ]
     },

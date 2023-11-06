@@ -24,7 +24,7 @@ const PopularService = () => {
                          <p>{service.ServiceDescription}</p>
                          <p>Price: ${service.ServicePrice} 1/h</p>
                          <div className="card-actions ">
-                         <button className="btn "> See details</button>
+                        <Link to={`/seeDetails/${service._id}`}> <button className="btn "> See details</button></Link>
                          </div>
                          <div>
                             <h1 className="font-bold py-3">About service provider</h1>

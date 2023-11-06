@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Allservices = () => {
     const [searchQuery, setSearchQuery] = useState(""); // State for the search input
@@ -56,7 +57,7 @@ const Allservices = () => {
                           <p>Service Area: {item.serviceArea}</p>
                           <p>Price :{ item.servicePrice}</p>
                           <div className="card-actions">
-                          <button className="btn ">see details</button>
+                          <Link to={`/seeAllDetails/${item._id}`}> <button className="btn "> See details</button></Link>
                            </div>
 
                            <div>
@@ -88,7 +89,7 @@ const Allservices = () => {
                           <p>Service Area: {item.serviceArea}</p>
                           <p>Price :{ item.servicePrice}</p>
                           <div className="card-actions">
-                          <button className="btn ">see details</button>
+                          <Link to={`/seeAllDetails/${item._id}`}> <button className="btn "> See details</button></Link>
                            </div>
 
                            <div>
