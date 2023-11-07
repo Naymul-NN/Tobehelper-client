@@ -1,6 +1,7 @@
 import Banner from "../banner/Banner";
 import BeAprovider from "./BeAprovider";
 import Faq from "./Faq";
+import Map from "./Map";
 import PopularService from "./PopularService";
 import Testimonial from "./Testimonial";
 
@@ -13,6 +14,7 @@ const Home = () => {
             <Testimonial></Testimonial>
 
             <Faq></Faq>
+            <Map></Map>
         </div>
     );
 };
