@@ -52,7 +52,7 @@ const Navbar = () => {
           <ul className="p-2 w-44">
           <li><Link to="/myservice">My-services</Link></li>
           <li><Link to="/addservice">Add-services </Link></li>
-          <li><Link> My-schedules</Link></li>
+          <li><Link to ="/myscedules">My-schedules</Link></li>
           </ul>
         </details>
       </li>

@@ -9,6 +9,7 @@ import SeeAllDetails from "../seeallDetails/SeeAllDetails";
 import AddService from "../addservice/AddService";
 import MyService from "../myservice/MyService";
 import Update from "../update/Update";
+import MyScedules from "../myscedules/MyScedules";
 const router = createBrowserRouter([
     {
       path: "/",
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
           path:'/update/:id',
           element:<Update></Update>,
           loader:({params}) => fetch(`http://localhost:5000/providerServiceOne/${params.id}`)
+        },
+        {
+          path:'/myscedules',
+          element:<MyScedules></MyScedules>
         }
       ]
     },
