@@ -11,6 +11,7 @@ import MyService from "../myservice/MyService";
 import Update from "../update/Update";
 import MyScedules from "../myscedules/MyScedules";
 import Privet from "../privet/Privet";
+import Account from "../home/Account";
 const router = createBrowserRouter([
     {
       path: "/",
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
         {
           path:'/myscedules',
           element:<Privet> <MyScedules></MyScedules></Privet>
+        },
+        {
+          path:'/account',
+          element:<Privet> <Account></Account></Privet>
         }
       ]
     },
