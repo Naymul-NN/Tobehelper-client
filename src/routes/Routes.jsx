@@ -10,6 +10,7 @@ import AddService from "../addservice/AddService";
 import MyService from "../myservice/MyService";
 import Update from "../update/Update";
 import MyScedules from "../myscedules/MyScedules";
+import Privet from "../privet/Privet";
 const router = createBrowserRouter([
     {
       path: "/",
@@ -33,21 +34,21 @@ const router = createBrowserRouter([
         },
         {
           path:'/seeDetails/:id',
-          element:<SeeDetails></SeeDetails>,
+          element:<Privet><SeeDetails></SeeDetails></Privet>,
           loader:({params}) => fetch(`http://localhost:5000/service/${params.id}`)
         },
         {
           path:'/seeAllDetails/:id',
-          element:<SeeAllDetails></SeeAllDetails>,
+          element:<Privet><SeeAllDetails></SeeAllDetails></Privet>,
           loader:({params})=> fetch(`http://localhost:5000/allservice/${params.id}`)
         },
         {
           path:'/addservice',
-          element:<AddService></AddService>
+          element:<Privet> <AddService></AddService></Privet>
         },
         {
           path:'/myservice',
-          element:<MyService></MyService>
+          element:<Privet><MyService></MyService></Privet>
         },
         {
           path:'/update/:id',
@@ -56,7 +57,7 @@ const router = createBrowserRouter([
         },
         {
           path:'/myscedules',
-          element:<MyScedules></MyScedules>
+          element:<Privet> <MyScedules></MyScedules></Privet>
         }
       ]
     },

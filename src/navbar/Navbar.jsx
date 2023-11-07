@@ -30,14 +30,14 @@ const Navbar = () => {
       </label>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
        {link}
-                  <li>
+                 { user ? ( <li>
                     <a>Dashbord</a>
                    <ul className="p-2 w-44">
                    <li><Link>My-services</Link></li>
                     <li><Link>Add-services </Link></li>
                     <li><Link> My-schedules</Link></li>
                    </ul>
-                   </li>
+                   </li>) : " " }
 
       </ul>
     </div>
@@ -46,7 +46,7 @@ const Navbar = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
      {link}
-        <li tabIndex={0}>
+       {user ? ( <li tabIndex={0}>
         <details>
           <summary>Dashbord</summary>
           <ul className="p-2 w-44">
@@ -55,7 +55,7 @@ const Navbar = () => {
           <li><Link to ="/myscedules">My-schedules</Link></li>
           </ul>
         </details>
-      </li>
+      </li>) : " "}
 
      </ul>
      </div>
