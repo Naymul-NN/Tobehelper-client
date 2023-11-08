@@ -19,7 +19,7 @@ const AddService = () => {
       const providerInfo = {serviceName,Pname,providerEmail,price,date,info,photo}
       console.log(providerInfo)
 
-      axios.post('http://localhost:5000/providerservice', providerInfo, {
+      axios.post('https://tobehelper-server-site.vercel.app/providerservice', providerInfo, {
     headers: {
     'Content-Type': 'application/json',
   }

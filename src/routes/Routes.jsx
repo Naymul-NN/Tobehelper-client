@@ -38,12 +38,12 @@ const router = createBrowserRouter([
         {
           path:'/seeDetails/:id',
           element:<Privet><SeeDetails></SeeDetails></Privet>,
-          loader:({params}) => fetch(`http://localhost:5000/service/${params.id}`)
+          loader:({params}) => fetch(`https://tobehelper-server-site.vercel.app/service/${params.id}`)
         },
         {
           path:'/seeAllDetails/:id',
           element:<Privet><SeeAllDetails></SeeAllDetails></Privet>,
-          loader:({params})=> fetch(`http://localhost:5000/allservice/${params.id}`)
+          loader:({params})=> fetch(`https://tobehelper-server-site.vercel.app/allservice/${params.id}`)
         },
         {
           path:'/addservice',
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
         {
           path:'/update/:id',
           element:<Update></Update>,
-          loader:({params}) => fetch(`http://localhost:5000/providerServiceOne/${params.id}`)
+          loader:({params}) => fetch(`https://tobehelper-server-site.vercel.app/providerServiceOne/${params.id}`)
         },
         {
           path:'/myscedules',

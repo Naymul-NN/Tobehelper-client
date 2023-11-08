@@ -9,7 +9,7 @@ const MyService = () => {
     console.log(myservice)
     // console.log(myservice)
     useEffect(()=>{
-          fetch(`http://localhost:5000/providerservice/${user?.email}`)
+          fetch(`https://tobehelper-server-site.vercel.app/providerservice/${user?.email}`)
           .then(res=>res.json())
           .then(data=>{
               setMyservice(data)
@@ -40,7 +40,7 @@ const MyService = () => {
         ));
         const proceedWithDeletion = () => {
           // Delete the item and update the state
-          fetch(`http://localhost:5000/providerservice/${id}`, {
+          fetch(`https://tobehelper-server-site.vercel.app/providerservice/${id}`, {
             method: "DELETE",
           })
             .then((res) => res.json())

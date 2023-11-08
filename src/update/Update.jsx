@@ -18,7 +18,7 @@ const Update = () => {
     const photo =form.photo.value;
     const updateInfo = {serviceName,Pname,providerEmail,price,date,info,photo}
     console.log(updateInfo)
-    fetch(`http://localhost:5000/providerServiceOne/${updateData._id}`,{
+    fetch(`https://tobehelper-server-site.vercel.app/providerServiceOne/${updateData._id}`,{
         method:'PUT',
         headers:{
             'Content-Type':"application/json"

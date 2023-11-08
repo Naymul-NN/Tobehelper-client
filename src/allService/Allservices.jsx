@@ -9,7 +9,7 @@ const Allservices = () => {
 
 
     const getdata = async()=>{
-        const res = await axios.get('http://localhost:5000/allServices')
+        const res = await axios.get('https://tobehelper-server-site.vercel.app/allServices')
         return res
     }
     const {data, isLoading,}= useQuery({

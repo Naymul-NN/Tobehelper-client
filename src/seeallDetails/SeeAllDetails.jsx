@@ -27,7 +27,7 @@ const SeeAllDetails = () => {
         return; // Do not proceed with the POST request.
       }
 
-      axios.post('http://localhost:5000/bookingService', bookInfo, {
+      axios.post('https://tobehelper-server-site.vercel.app/bookingService', bookInfo, {
   headers: {
     'Content-Type': 'application/json',
   }

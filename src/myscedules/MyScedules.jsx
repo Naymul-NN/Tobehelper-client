@@ -7,7 +7,7 @@ const MyScedules = () => {
     const {user} = useContext(AuthContext)
  console.log(user)
     const getdata = async()=>{
-        const res = await axios.get(`http://localhost:5000/bookingService/${user?.email}`)
+        const res = await axios.get(`https://tobehelper-server-site.vercel.app/bookingService/${user?.email}`)
         return res.data
     }
     const {data, isLoading,}= useQuery({
