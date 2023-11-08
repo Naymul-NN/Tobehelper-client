@@ -17,8 +17,8 @@ const PopularService = () => {
                 {
                     services.map(service => (
                         <div key={service._id} >
-                         <div className="card w-[560px] h-[700px] bg-base-100 shadow-xl">
-                         <figure><img className="h-[400px]" src={service.ServiceImage} alt="Shoes" /></figure>
+                         <div className="card lg:w-[560px] lg:h-[700px] bg-base-100 shadow-xl">
+                         <figure><img className="lg:h-[400px]" src={service.ServiceImage} alt="Shoes" /></figure>
                          <div className="card-body">
                          <h2 className="card-title">{service.ServiceName}</h2>
                          <p>{service.ServiceDescription}</p>

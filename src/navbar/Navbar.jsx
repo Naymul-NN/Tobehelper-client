@@ -21,8 +21,8 @@ const Navbar = () => {
           </>         
 
     return (
-        <div className="py-10  relative ">
-        <div className="navbar  bg-base-100 fixed z-50 top-0 w-[100%] mx-auto">
+        <div className=" lg:py-10  lg:relative ">
+        <div className="navbar  bg-base-100 lg:fixed lg:z-50 lg:top-0 w-[100%] mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -59,7 +59,7 @@ const Navbar = () => {
 
      </ul>
      </div>
-   <div className="navbar-end flex lg:flex-row flex-col gap-24">
+   <div className="navbar-end flex lg:flex-row flex-col lg:gap-24">
   {
     user &&    <div className="w-14  rounded-full">
                 <h1 className="pr-2"><span className="font-bold">user:</span>{user.email}</h1>
