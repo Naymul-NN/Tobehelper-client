@@ -50,7 +50,7 @@ const MyService = () => {
               setMyservice(dataRemain);
              
               toast.success('Item deleted successfully', {
-                duration: 2000, // Duration in milliseconds
+                duration: 1000, // Duration in milliseconds
               });
             });
         };
@@ -58,7 +58,7 @@ const MyService = () => {
         const cancelDeletion = () => {
         
           toast.error('Deletion canceled', {
-            duration: 2000, // Duration in milliseconds
+            duration: 1000, // Duration in milliseconds
           });
         };
       
@@ -70,7 +70,7 @@ const MyService = () => {
             <h1 className="pt-10 font-bold text-center">here you can see your added service </h1>
            <div className="flex flex-col justify-center items-center gap-7">
             {
-                myservice.map(item=>(
+              myservice.length > 0 ?   ( myservice?.map(item=>(
                     <div key={item._id}>
                         <div className="card   w-[800px] bg-base-100 shadow-xl">
                        <figure className="h-[400px] w-[800px]"><img className="h-full w-full object-cover" src={item?.photo} alt="Shoes" /></figure>
@@ -85,6 +85,11 @@ const MyService = () => {
                         </div>
                      </ div>
                 ))
+               ) : (
+                <div>
+                        <p className=" text-5xl text-center font-bold py-10 text-pink-400"> No service <br /> available</p>
+                    </div>
+               )
             }
            </div>
         </div>

@@ -67,7 +67,7 @@ const Banner = () => {
                         },
                         repulse: {
                             distance: 200,
-                            duration: 0.4,
+                            duration: 0.2,
                         },
                     },
                 },
@@ -89,7 +89,7 @@ const Banner = () => {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 6,
+                        speed: 4,
                         straight: false,
                     },
                     number: {

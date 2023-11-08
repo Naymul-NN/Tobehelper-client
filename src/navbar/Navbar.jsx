@@ -21,8 +21,8 @@ const Navbar = () => {
           </>         
 
     return (
-        <div className="py-10 relative ml-16">
-        <div className="navbar  bg-base-100 fixed z-50 top-0 w-[90%] mx-auto">
+        <div className="py-10  relative ">
+        <div className="navbar  bg-base-100 fixed z-50 top-0 w-[100%] mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -63,15 +63,15 @@ const Navbar = () => {
   {
     user &&    <div className="w-14  rounded-full">
                 <h1 className="pr-2"><span className="font-bold">user:</span>{user.email}</h1>
-                <img src={user.photoURL} />
-      </div>
+                <img className="rounded-full ml-10" src={user.photoURL} />
+             </div>
   }
    {
       user ?
-      <button onClick={handleLogout} className="btn btn-sm btn-primary">log out</button>
+      <button onClick={handleLogout} className="btn btn-sm btn-secondary">log out</button>
       :
       
-      <Link to ="/login"><button className="btn  btn-sm btn-primary">log in</button></Link>
+      <Link to ="/login"><button className="btn btn-sm btn-secondary ">log in</button></Link>
     
    }  
   </div>

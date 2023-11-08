@@ -25,7 +25,7 @@ const MyScedules = () => {
                 <h1 className="pt-10 text-center font-bold">Here you see your booking</h1>
                 <div className="grid grid-cols-2 gap-7 pl-20">
                 {
-                    data?.map(service => (
+                  data?.length > 0 ?  (  data?.map(service => (
                         <div key={service._id} >
                          <div className="card w-[600px] bg-base-100 shadow-xl">
                          <figure><img className="h-[400px]" src={service.photo} alt="Shoes" /></figure>
@@ -43,6 +43,11 @@ const MyScedules = () => {
                          </div>
                         </div>
                     ))
+                  ) : (
+                    <div>
+                    <p className=" text-5xl text-center font-bold">there is no booking data <br /> available</p>
+                    </div>
+                  )
                 }
           
                 </div>
