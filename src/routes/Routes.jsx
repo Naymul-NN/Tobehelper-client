@@ -12,10 +12,12 @@ import Update from "../update/Update";
 import MyScedules from "../myscedules/MyScedules";
 import Privet from "../privet/Privet";
 import Account from "../home/Account";
+import Error from "../error/Error";
 const router = createBrowserRouter([
     {
       path: "/",
       element:<Layout></Layout>,
+      errorElement:<Error></Error>,
       children:[
         {
             path:'/',
