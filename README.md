@@ -2,7 +2,6 @@
 
 [live link here](https://help-hand.surge.sh/)
 
-5 poients here
 
 . react particles
   "react-particles" is a popular React library that allows you to easily integrate particle animations into your web applications. It's built on top of the 
