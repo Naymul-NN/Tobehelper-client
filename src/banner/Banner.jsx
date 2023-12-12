@@ -33,7 +33,7 @@ const Banner = () => {
        <div style={{ width: "auto", height: "400px", }}>
        <div id="particle-container" className="particle-container mb-20 " style={{ height:"400px" ,marginTop:"50px",  }}>
             
-            <h1 className="relative z-10 text-white text-3xl text-center font-bold pt-20" >We fix any <br/><span className="text-pink-400">any type of  problem</span>   <br /> of your House</h1>
+            <h1 className="relative z-10 text-white text-3xl text-center font-bold pt-20" >We fix any <br/><span className="text-pink-400"> type of  problem</span>   <br /> of your House</h1>
             <Particles
             
             id="tsparticles"

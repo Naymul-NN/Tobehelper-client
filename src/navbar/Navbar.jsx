@@ -62,16 +62,16 @@ const Navbar = () => {
    <div className="navbar-end flex lg:flex-row flex-col lg:gap-24">
   {
     user &&    <div className="w-14  rounded-full">
-                <h1 className="pr-2"><span className="font-bold">user:</span>{user.email}</h1>
-                <img className="rounded-full ml-10" src={user.photoURL} />
+                {/* <h1 className="pr-2"><span className="font-bold">user:</span>{user.email}</h1> */}
+                <img className="rounded-full ml-20" src={user.photoURL} />
              </div>
   }
    {
       user ?
-      <button onClick={handleLogout} className="btn btn-sm btn-secondary">log out</button>
+      <button onClick={handleLogout} className="btn btn-sm btn-secondary mr-8">log out</button>
       :
       
-      <Link to ="/login"><button className="btn btn-sm btn-secondary ">log in</button></Link>
+      <Link to ="/login"><button className="btn btn-sm btn-secondary mr-8 ">log in</button></Link>
     
    }  
   </div>
